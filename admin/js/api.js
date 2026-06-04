@@ -21,10 +21,19 @@ async function apiFetch(endpoint, options = {}) {
     
     if (response.status === 401) {
       // Auto logout on unauthorized
-      if (!window.location.pathname.includes('/admin/index.html')) {
+      const isLoginPage = window.location.pathname.includes('admin/index.html') || window.location.pathname.endsWith('/admin') || window.location.pathname.endsWith('/admin/');
+      if (!isLoginPage) {
         sessionStorage.removeItem('auth_token');
         sessionStorage.removeItem('user');
-        window.location.href = '/admin/index.html';
+        
+        let loginUrl = 'admin/index.html';
+        const path = window.location.pathname;
+        if (path.includes('/admin/') || path.endsWith('/admin')) {
+          loginUrl = 'index.html';
+        } else if (path.includes('/public/') || path.endsWith('/public')) {
+          loginUrl = '../admin/index.html';
+        }
+        window.location.href = loginUrl;
       }
       return;
     }

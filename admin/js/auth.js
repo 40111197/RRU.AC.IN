@@ -55,7 +55,14 @@ function getLoggedInUser() {
 function checkAccess(requiredRole = 'editor') {
   const user = getLoggedInUser();
   if (!user) {
-    window.location.href = '/admin/index.html';
+    let loginUrl = 'admin/index.html';
+    const path = window.location.pathname;
+    if (path.includes('/admin/') || path.endsWith('/admin')) {
+      loginUrl = 'index.html';
+    } else if (path.includes('/public/') || path.endsWith('/public')) {
+      loginUrl = '../admin/index.html';
+    }
+    window.location.href = loginUrl;
     return false;
   }
   
@@ -65,7 +72,14 @@ function checkAccess(requiredRole = 'editor') {
   
   if (userLevel < requiredLevel) {
     alert('Access Denied: You do not have permission to view this page.');
-    window.location.href = '/admin/dashboard.html';
+    let dashboardUrl = 'admin/dashboard.html';
+    const path = window.location.pathname;
+    if (path.includes('/admin/') || path.endsWith('/admin')) {
+      dashboardUrl = 'dashboard.html';
+    } else if (path.includes('/public/') || path.endsWith('/public')) {
+      dashboardUrl = '../admin/dashboard.html';
+    }
+    window.location.href = dashboardUrl;
     return false;
   }
   
@@ -78,7 +92,14 @@ function checkAccess(requiredRole = 'editor') {
 function logout() {
   sessionStorage.removeItem('auth_token');
   sessionStorage.removeItem('user');
-  window.location.href = '/admin/index.html';
+  let loginUrl = 'admin/index.html';
+  const path = window.location.pathname;
+  if (path.includes('/admin/') || path.endsWith('/admin')) {
+    loginUrl = 'index.html';
+  } else if (path.includes('/public/') || path.endsWith('/public')) {
+    loginUrl = '../admin/index.html';
+  }
+  window.location.href = loginUrl;
 }
 
 // Export to window
