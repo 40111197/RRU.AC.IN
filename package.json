@@ -1,0 +1,13 @@
+{
+  "name": "rru-puducherry-cms",
+  "version": "1.0.0",
+  "description": "Vanilla JS/CSS CMS for RRU Puducherry",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

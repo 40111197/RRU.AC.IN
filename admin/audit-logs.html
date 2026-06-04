@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Logs | Superadmin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+<body class="admin-layout">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <main class="main-content">
+        <header class="table-header">
+            <h1>Audit Logs</h1>
+            <button id="export-csv" class="btn btn-primary"><i class="fas fa-download"></i> Export CSV</button>
+        </header>
+
+        <div class="data-table-container">
+            <div class="table-header" style="background:#f9fafb;">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="log-search" placeholder="Search by user or action...">
+                </div>
+                <div class="table-filters">
+                    <select id="action-filter">
+                        <option value="">All Actions</option>
+                        <option value="CREATE">CREATE</option>
+                        <option value="UPDATE">UPDATE</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Table</th>
+                        <th>Changes</th>
+                    </tr>
+                </thead>
+                <tbody id="logs-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/audit-logs-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Dashboard and Table details */
+.main-content h1 { font-size: 1.8rem; color: var(--navy); }
+
+/* Audit Log Badges */
+.badge-login { background: #e0f2fe; color: #0369a1; }
+.badge-logout { background: #f1f5f9; color: #475569; }
+
+/* Data table small variant for dashboard */
+.data-table.small th { font-size: 0.75rem; padding: 10px; }
+.data-table.small td { font-size: 0.8rem; padding: 10px; }
+
+/* Top bar static date */
+.top-bar-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#current-date { color: var(--gray-500); font-weight: 500; font-size: 0.9rem; }

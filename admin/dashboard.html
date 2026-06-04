@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body class="admin-layout">
+    <!-- Sidebar Placeholder -->
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar-admin">
+            <div>
+                <h1 id="page-title">Dashboard</h1>
+                <p class="breadcrumb" style="font-size:12px;color:var(--gray-400);margin-top:4px">Home / Dashboard</p>
+            </div>
+        </header>
+
+        <div id="dashboard-view" class="view-container">
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <div>
+                    <h2>Welcome back, Admin! 👋</h2>
+                    <p id="current-date"></p>
+                </div>
+                <div class="shield-icon">🛡️</div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="stat-info">
+                        <h4 id="stat-news">0</h4>
+                        <p>Total News</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#e0f2fe; color:#0369a1"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="stat-info">
+                        <h4 id="stat-events">0</h4>
+                        <p>Total Events</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#fef3c7; color:#b45309"><i class="fas fa-images"></i></div>
+                    <div class="stat-info">
+                        <h4 id="stat-gallery">0</h4>
+                        <p>Gallery Items</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:#dcfce7; color:#15803d"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <h4 id="stat-users">0</h4>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Recent Activity -->
+                <div class="card recent-activity">
+                    <div class="card-header">
+                        <h3>Recent Audit Logs</h3>
+                        <a href="audit-logs.html" class="btn-text">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table small">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Table</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-audit-body">
+                                <!-- Loaded via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="card quick-actions">
+                    <div class="card-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="action-buttons">
+                            <a href="news.html" class="action-btn"><i class="fas fa-plus"></i> Add News</a>
+                            <a href="events.html" class="action-btn"><i class="fas fa-plus"></i> Add Event</a>
+                            <a href="gallery.html" class="action-btn"><i class="fas fa-upload"></i> Upload Images</a>
+                            <a href="hero.html" class="action-btn"><i class="fas fa-sliders-h"></i> Manage Hero</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/security.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

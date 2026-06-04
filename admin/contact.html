@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager | Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body class="admin-layout">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <main class="main-content">
+        <header class="table-header">
+            <h1>Contact Details</h1>
+        </header>
+
+        <div class="card" style="max-width: 800px; margin-top: 20px;">
+            <div class="card-body">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="email">Campus Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Campus Address</label>
+                        <textarea id="location" required style="height: 100px;"></textarea>
+                    </div>
+                    <div style="text-align: right; margin-top: 20px;">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/security.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/contact-admin.js"></script>
+</body>
+</html>

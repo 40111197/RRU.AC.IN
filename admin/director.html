@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Manager | Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body class="admin-layout">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <main class="main-content">
+        <header class="table-header">
+            <h1>Campus Director Details</h1>
+        </header>
+
+        <div class="card" style="max-width: 800px; margin-top: 20px;">
+            <div class="card-body">
+                <form id="director-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_email">Enquiry Email</label>
+                            <input type="email" id="contact_email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Welcome Message</label>
+                        <textarea id="message" required style="height: 150px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image_file">Professional Photo</label>
+                        <input type="file" id="image_file">
+                        <div class="image-preview-container" style="width: 150px; height: 150px; border-radius: 50%;">
+                            <img id="image-preview" src="">
+                        </div>
+                        <input type="hidden" id="image_url">
+                    </div>
+                    <div style="text-align: right; margin-top: 20px;">
+                        <button type="submit" class="btn btn-primary">Save Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/security.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/director-admin.js"></script>
+</body>
+</html>
