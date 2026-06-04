@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    sessionStorage.removeItem('login_attempts'); // Auto-clear lockouts on reload
     const loginForm = document.getElementById('login-form');
     const errorArea = document.getElementById('error-area');
     const lockoutTimer = document.getElementById('lockout-timer');
