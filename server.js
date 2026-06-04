@@ -7,8 +7,9 @@ const router = jsonServer.router(path.join(__dirname, 'db/db.json'));
 // Serve 'admin' folder at /admin - MOVE THIS ABOVE others
 server.use('/admin', express.static(path.join(__dirname, 'admin')));
 
-// Serve 'public' at root
+// Serve 'public' at root and at /public for local/remote link compatibility
 server.use(express.static(path.join(__dirname, 'public')));
+server.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Allow cross-origin requests
 server.use(jsonServer.bodyParser);
