@@ -58,6 +58,67 @@
       "status": "success",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
       "timestamp": "2026-06-04T07:21:09.082Z"
+    },
+    {
+      "id": "b68dd885-3b8b-4c2b-9473-de22e63f1d50",
+      "email": "ad***@rru.ac.in",
+      "status": "failed",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T07:47:12.767Z"
+    },
+    {
+      "id": "4f1629ea-939e-4399-aeaf-6afc9f2f1a76",
+      "email": "ad***@rru.ac.in",
+      "status": "failed",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T07:47:48.748Z"
+    },
+    {
+      "id": "7359401d-4a7a-41aa-b3c4-d7e9e35c0344",
+      "user_id": "1",
+      "email": "ad***@rru.ac.in",
+      "status": "success",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T07:48:31.785Z"
+    },
+    {
+      "id": "fc2f165f-20c7-4707-9154-8033765fd4eb",
+      "user_id": "1",
+      "email": "ad***@rru.ac.in",
+      "status": "success",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T09:05:47.364Z"
+    },
+    {
+      "id": "8883d423-4d3c-4883-a919-04cdff85567f",
+      "email": "ad***@rru.ac.in",
+      "status": "failed",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T09:11:59.285Z"
+    },
+    {
+      "id": "0c567cb2-fdff-4bae-b8a4-e6716c7d8254",
+      "user_id": "1",
+      "email": "ad***@rru.ac.in",
+      "status": "success",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T09:12:44.686Z"
+    },
+    {
+      "id": "f7f385ef-e95d-4041-8db1-7deb53a67a8d",
+      "user_id": "1",
+      "email": "ad***@rru.ac.in",
+      "status": "success",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T09:30:24.680Z"
+    },
+    {
+      "id": "ed448d2b-d4fe-4e0a-a7e1-5adaa059cdf8",
+      "user_id": "1",
+      "email": "ad***@rru.ac.in",
+      "status": "success",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "timestamp": "2026-06-04T09:49:24.497Z"
     }
   ],
   "audit_logs": [
@@ -170,6 +231,26 @@
         "updated_at": "2026-06-04T07:28:52.380Z"
       },
       "timestamp": "2026-06-04T07:28:52.454Z"
+    },
+    {
+      "id": "9bcaeb94-0105-4e01-a8b4-d76fdc41ab80",
+      "user_id": "1",
+      "username": "superadmin",
+      "action": "CREATE",
+      "table_name": "events",
+      "record_id": "17178815-1ff6-4511-9afb-7262859bd924",
+      "old_data": null,
+      "new_data": {
+        "title": "Test Event",
+        "event_date": "2026-06-04",
+        "location": "Puducherry",
+        "description": "This is a test event description.",
+        "is_active": true,
+        "updated_at": "2026-06-04T09:13:57.255Z",
+        "id": "17178815-1ff6-4511-9afb-7262859bd924",
+        "created_at": "2026-06-04T09:13:57.255Z"
+      },
+      "timestamp": "2026-06-04T09:13:57.324Z"
     }
   ],
   "hero_slides": [
@@ -237,6 +318,16 @@
       "location": "Virtual",
       "description": "Comprehensive course on psychological aspects of cyber space.",
       "is_active": true
+    },
+    {
+      "title": "Test Event",
+      "event_date": "2026-06-04",
+      "location": "Puducherry",
+      "description": "This is a test event description.",
+      "is_active": true,
+      "updated_at": "2026-06-04T09:13:57.255Z",
+      "id": "17178815-1ff6-4511-9afb-7262859bd924",
+      "created_at": "2026-06-04T09:13:57.255Z"
     }
   ],
   "gallery": [

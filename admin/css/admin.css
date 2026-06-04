@@ -699,3 +699,349 @@ input:checked + .slider:before { transform: translateX(20px); }
   .form-grid { grid-template-columns: 1fr; }
   .form-group.full { grid-column: span 1; }
 }
+
+/* ===== ACTION BUTTONS DESIGN SYSTEM ===== */
+
+/* Container for grouping action buttons inline */
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+/* Base style for pill buttons */
+.btn-edit, .btn-delete, .btn-view, .btn-toggle, .btn-inline-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* EDIT BUTTON */
+.btn-edit {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.btn-edit:hover {
+  background: #dbeafe;
+  color: #1e40af;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.2);
+}
+
+/* DELETE BUTTON */
+.btn-delete {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+.btn-delete:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fca5a5;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+}
+
+/* VIEW/DETAILS BUTTON */
+.btn-view {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+.btn-view:hover {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
+}
+
+/* TOGGLE/STATUS/DEACTIVATE BUTTON */
+.btn-toggle {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+.btn-toggle:hover {
+  background: #ffedd5;
+  border-color: #fdba74;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.15);
+}
+
+/* SETTINGS INLINE EDIT BUTTON */
+.btn-inline-edit {
+  padding: 6px 12px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.btn-inline-edit:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+/* TABLE ACTIONS COLUMN WIDTH */
+.data-table th:last-child,
+.data-table td:last-child {
+  min-width: 170px;
+  white-space: nowrap;
+  width: 1%; /* Shrink to fit content */
+}
+
+/* UP/DOWN ORDER BUTTONS (hero slides) */
+.btn-order {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+.btn-order:hover {
+  background: #e2e8f0;
+  color: #374151;
+  transform: translateY(-1px);
+}
+
+/* PRIMARY PAGE ACTION BUTTONS (top-right) */
+.page-action-btn,
+.btn-primary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.page-action-btn:hover,
+.btn-primary-action:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.5);
+  transform: translateY(-2px);
+}
+
+/* MODAL BUTTONS */
+.btn-modal-save {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-modal-save:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.4);
+}
+
+.btn-modal-cancel {
+  padding: 10px 24px;
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-modal-cancel:hover {
+  background: #e2e8f0;
+  color: #374151;
+}
+
+/* ===== SVG ICON SYSTEM ===== */
+
+/* SVG icons inherit color from parent unless specified */
+.nav-icon svg, 
+.action-btns svg,
+.page-action-btn svg,
+.btn-primary-action svg,
+.quick-btn svg,
+.input-icon svg {
+  display: block;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.nav-item svg {
+  transition: stroke 0.2s;
+}
+
+/* Stat card icon boxes */
+.stat-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-box svg {
+  display: block;
+}
+
+/* Input icon positioning (Login Page) */
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.login-form .form-group input {
+  padding-left: 42px !important;
+}
+
+/* Eye toggle button */
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  color: #94a3b8;
+  z-index: 10;
+}
+
+.eye-toggle:hover svg {
+  stroke: #64748b;
+}
+
+/* User avatar placeholder */
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Sidebar Nav layout fix for SVGs */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Action buttons with SVG */
+.btn-edit svg,
+.btn-delete svg,
+.btn-view svg,
+.btn-toggle svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -2px; /* Pull text closer */
+}
+
+/* ===== QUICK ACTION BUTTONS (Dashboard) ===== */
+.quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.quick-btn:hover {
+  opacity: 0.88;
+  transform: translateX(3px);
+}
+
+.quick-btn-blue   { background: #dbeafe; color: #1d4ed8; }
+.quick-btn-purple { background: #e0e7ff; color: #6366f1; }
+.quick-btn-orange { background: #ffedd5; color: #f97316; }
+.quick-btn-green  { background: #dcfce7; color: #22c55e; }
+
+.quick-btn svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+/* Sidebar logout icon alignment */
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Stat card layout */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

@@ -6,21 +6,23 @@ async function initContact() {
 
         container.innerHTML = `
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <div class="contact-cards-wrapper">
-                    <div class="contact-card">
-                        <div class="contact-icon-circle">
-                            <i class="fas fa-envelope"></i>
+                <div class="contact-main-box">
+                    <h2 class="section-title white">Get in Touch</h2>
+                    <div class="contact-cards-wrapper">
+                        <div class="contact-card">
+                            <div class="contact-icon-circle">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <p>${window.sanitizeHTML(data.email)}</p>
                         </div>
-                        <h4>Email</h4>
-                        <p>${window.sanitizeHTML(data.email)}</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon-circle">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-card">
+                            <div class="contact-icon-circle">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Location</h4>
+                            <p>${window.sanitizeHTML(data.location)}</p>
                         </div>
-                        <h4>Location</h4>
-                        <p>${window.sanitizeHTML(data.location)}</p>
                     </div>
                 </div>
             </div>

@@ -60,6 +60,28 @@
   margin: 0 6px;
 }
 
+/* Admin Login Button */
+.btn-login {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white) !important;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 14px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-login:hover {
+  background-color: var(--white);
+  color: var(--navy) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 2: MAIN HEADER
@@ -905,70 +927,71 @@
    SECTION 12: GET IN TOUCH / CONTACT
    ══════════════════════════════════════════════════════════════ */
 .contact-section {
-  background: var(--navy);   /* DARK NAVY */
-  padding: 56px 0;
+  background: var(--white);   /* Changed to white so the box pops */
+  padding: 80px 0;
 }
 
-.contact-section .section-title {
-  color: var(--white);
+.contact-main-box {
+  background-color: var(--navy);
+  border-radius: 12px;
+  padding: 60px 40px;
   text-align: center;
-  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.contact-section .section-title::after { display: none; }
+
+.contact-main-box h2.section-title {
+  color: var(--white) !important;
+  margin-bottom: 50px;
+}
+.contact-main-box h2.section-title::after { display: none; }
 
 .contact-cards-wrapper {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  max-width: 600px;
+  gap: 80px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .contact-card {
+  flex: 1;
   text-align: center;
 }
 
 .contact-icon-circle {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
 }
+.contact-icon-circle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
 .contact-icon-circle i {
-  font-size: 26px;
+  font-size: 24px;
   color: var(--white);
 }
 
 .contact-card h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .contact-card p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--blue-pale);
+  font-weight: 400;
 }
-
-/* Adapter for contact.js which uses .grid-2 & inline styles */
-.contact-section .grid-2 {
-  grid-template-columns: 1fr 1fr;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-section .contact-card[style] {
-  background: rgba(255,255,255,0.06) !important;
-  border-radius: 10px;
-}
-.contact-section .contact-card[style] h4 { color: var(--white) !important; }
-.contact-section .contact-card[style] i  { color: var(--blue-light) !important; }
-.contact-section h2.section-title { color: var(--white) !important; }
 
 
 /* ══════════════════════════════════════════════════════════════

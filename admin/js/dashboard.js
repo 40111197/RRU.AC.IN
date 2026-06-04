@@ -17,21 +17,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // 2. Fetch Stats
-    try {
-        const [news, events, gallery, users] = await Promise.all([
-            window.api.get('/news'),
-            window.api.get('/events'),
-            window.api.get('/gallery'),
-            window.api.get('/users?is_active=true')
-        ]);
+    const fetchStat = async (url, element) => {
+        try {
+            const data = await window.api.get(url);
+            element.textContent = Array.isArray(data) ? data.length : 0;
+        } catch (e) {
+            console.error(`Stat load failed for ${url}`, e);
+            element.textContent = '--';
+        }
+    };
 
-        statNews.textContent = news.length;
-        statEvents.textContent = events.length;
-        statGallery.textContent = gallery.length;
-        statUsers.textContent = users.length;
-    } catch (e) {
-        console.error('Stats load failed', e);
-    }
+    fetchStat('/news', statNews);
+    fetchStat('/events', statEvents);
+    fetchStat('/gallery', statGallery);
+    fetchStat('/users?is_active=true', statUsers);
 
     // 3. Fetch Recent Audit Logs
     try {
