@@ -173,11 +173,42 @@
   align-items: center;
 }
 
-.nav-bar .container {
+.nav-bar .container,
+.nav-bar-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
   width: 100%;
+}
+
+/* ===== Admin Login Button in Nav ===== */
+.nav-login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(249,115,22,0.35);
+  letter-spacing: 0.3px;
+}
+
+.nav-login-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.nav-login-btn svg {
+  stroke: #fff;
+  flex-shrink: 0;
 }
 
 .nav-list {
